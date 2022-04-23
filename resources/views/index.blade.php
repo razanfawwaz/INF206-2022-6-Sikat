@@ -4,9 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet"> </head>
-
+	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <title>SIKAT - DY6</title>
+</head>
 <body class="bg-slate-100">
+  <!-- Navbar -->
 	<nav class="border border-b-2 border-slate-300/40">
 		<div class="bg-slate-100 border-gray-200 px-2 sm:px-4 py-2.5">
 			<div class="container flex flex-wrap justify-between items-center mx-auto"> <a class="self-center text-lg md:text-md font-semibold whitespace-nowrap text-slate-500">Sistem Informasi Kecemasan Darurat</a>
@@ -24,15 +26,16 @@
 						<li> <a href="#" class="block py-4 mt-2 pr-4 pl-3 text-gray-700  hover:bg-gray-50 md:hover:bg-transparent md:p-0 md:hover:text-blue-700">Tentang</a> </li>
 						<li> <a href="#" class="block py-4 mt-2 pr-4 pl-3 text-gray-700  hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Cara Kerja</a> </li>
 						<li>
-							<div class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg drop-shadow cursor-pointer">
-                <a href="#" class="block py-2 text-white hover:bg-gray-50 md:hover:bg-transparent md:text-center md:hover:text-white md:p-0">Masuk</a> </div>
+							<div class="bg-blue-600 hover:bg-blue-700 hover:bg-transparent hover:border hover:border-blue-500  px-6 py-2 rounded-lg drop-shadow cursor-pointer">
+                <a href="#" class="block py-2 text-white hover:bg-gray-50 hover:text-blue-700 md:hover:bg-transparent md:text-center md:hover:text-white md:p-0">Masuk</a> </div>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</nav>
-  <div class="contents">
+  <!-- Hero Section -->
+  <div class="pb-32 border border-b-2 border-slate-300/40">
     <div class="flex flex-wrap container px-2 py-8 pt-20 mt-10 ml-16">
       <div class="flex flex-row">
         <!-- Left Section -->
@@ -76,6 +79,23 @@
             </div>
           </div>
       </div>
+    </div>
+  </div>
+  <!-- Detail -->
+  <div>
+    <div class="py-20 items-center justify-center">
+      <h1 class="text-4xl text-blue-700 font-semibold text-center">
+        Sedang dalam kondisi darurat?
+        <br>
+        <span class="underline underline-offset-8 decoration-blue-500/60">
+        SIKAT jawaban dari masalahmu!
+        </span>
+      </h1>
+      <p class="text-center pt-10 text-lg text-slate-600">
+        SIKAT dirancang untuk dapat membantu kamu dalam <br>kondisi gawat
+        daruratmu. Tim SIKAT dengan SIGAP dan <br> SEDIA akan datang ke lokasi
+        tempat laporan. #SIKATinAja
+      </p>
     </div>
   </div>
 </body>
