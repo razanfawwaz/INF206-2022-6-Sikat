@@ -22,8 +22,8 @@ Route::get('/', function () {
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
 
-Route::get('/register', 'RegisterController@create');
-Route::post(register, 'RegisterController@store');
+Route::get('/register', [RegisterController::class, 'index'])->name('index');
+Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
 Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
