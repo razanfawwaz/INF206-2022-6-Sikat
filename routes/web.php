@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +15,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/register', [RegisterController::class, 'index'])->name('index');
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/login', [LoginController::class, 'index'])->name('index');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
+
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
