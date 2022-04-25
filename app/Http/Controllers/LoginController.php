@@ -8,33 +8,27 @@ use Session;
 
 class LoginController extends Controller
 {
-    public function login()
+    public function index()
     {
-        if (Auth::check()) {
-            return redirect('home');
-        } else {
-            return view('login');
-        }
+        return view('login.index', [
+            'title' => 'Login'
+        ]);
     }
 
-    public function actionlogin(Request $request)
+    public function authenticate(Request $request)
     {
-        $data = [
-            'email' => $request->input('email'),
-            'password' => $request->input('password'),
-        ];
-
-        if (Auth::Attempt($data)) {
-            return redirect('home');
+        $credentials = $request -> validate([
+            'email' => 'required|email:dns',
+            'password' => 'required'
+        ]);
+        
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/home');
         } else {
-            Session::flash('error', 'Email atau Password Salah');
-            return redirect('/');
+            Session::flash('error', 'Email atau Password salah!');
+            return redirect('/login');
         }
-    }
-
-    public function actionlogout()
-    {
-        Auth::logout();
-        return redirect('/');
+        dd('berhasil login');
     }
 }
