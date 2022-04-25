@@ -15,11 +15,17 @@
                     {{ session('status') }}
                 </div>
             @endif
+            @if(session()->has('error'))
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mb-4 rounded relative" role="alert">
+                    <p>{{ session('error') }}</p>
+                    
+                </div>
+            @endif
         <div class="bg-white px-10 py-12 rounded-lg drop-shadow">
             <div class="border-b-2 border-slate-300/40 pb-4">
             <h1 class="text-center text-3xl font-semibold pt-2">Login to SIKAT</h1>
             </div>
-            <form action="{{ route('actionlogin') }}" method="post">
+            <form action="/login" method="post">
             @csrf
                 <div class="py-6">
                     <label for="email">Email</label>

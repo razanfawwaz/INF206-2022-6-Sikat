@@ -19,8 +19,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/login', [LoginController::class, 'login'])->name('login');
-Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+Route::get('/login', [LoginController::class, 'index'])->name('index');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('index');
 Route::post('/register', [RegisterController::class, 'store']);
