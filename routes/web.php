@@ -19,6 +19,13 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/form', function () {
+    return view('form');
+});
+
+Route::get('/tambahdata', 'FormController@input');
+
+
 Route::get('/register', [RegisterController::class, 'index'])->name('index');
 Route::post('/register', [RegisterController::class, 'store']);
 
