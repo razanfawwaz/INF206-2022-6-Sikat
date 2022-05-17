@@ -22,6 +22,7 @@
                             <a href="/form/edit/{{$frm->NomorHP}}">Edit</a>
                             <!--<-->
                             <a style="color:red;" href="/form/hapus/{{$frm->NomorHP}}">Delete</a>
+
                         </td>
                     </tr>
                     @endforeach

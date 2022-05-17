@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('UnitLayanan');
             $table->string('DeskripsiSingkatKejadian');
             $table->string('AlamatKejadian');
+
         });
     }
 

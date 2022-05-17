@@ -10,6 +10,7 @@ class FormController extends Controller
     {
         $form = DB::table('form')->get();
         return view('dashboard/dashboard', ['form' => $form]);
+
     }
 
     public function input()
@@ -21,6 +22,7 @@ class FormController extends Controller
     {
         DB::table('form')->insert([
             'Nama' => $request->Nama,
+
             'NomorHP' => $request->NomorHP,
             'UnitLayanan' => $request->UnitLayanan,
             'DeskripsiSingkatKejadian' => $request->DeskripsiSingkatKejadian,
@@ -45,6 +47,7 @@ class FormController extends Controller
             'UnitLayanan' => $request->UnitLayanan,
             'DeskripsiSingkatKejadian' => $request->DeskripsiSingkatKejadian,
             'AlamatKejadian' => $request->AlamatKejadian
+
         ]);
         return redirect('/tampildata');
     }
@@ -52,6 +55,7 @@ class FormController extends Controller
     public function hapus($NomorHP)
     {
         DB::table('form')->where('NomorHP', $NomorHP)->delete();
+
         return redirect('/tampildata');
     }
 }
