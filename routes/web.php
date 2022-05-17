@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +20,18 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/form', function () {
-    return view('form');
+Route::get('/buatlaporan', function () {
+    return view('dashboard\form');
 });
 
-Route::get('/tambahdata', 'FormController@input');
+Route::get('/dashboard', function () {
+    return view('dashboard\dashboard');
+});
 
+Route::get('/dashboard', [FormController::class, 'readdata']);
+
+Route::get('/form', [FormController::class, 'input']);
+Route::post('/form/store', [FormController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('index');
 Route::post('/register', [RegisterController::class, 'store']);

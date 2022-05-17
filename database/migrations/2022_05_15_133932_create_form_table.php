@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('form', function (Blueprint $table) {
             $table->string('Nama');
-            $table->string('Nomor HP');
-            $table->string('Unit Layanan');
-            $table->string('Deskripsi Singkat Kejadian');
-            $table->string('Alamat Kejadian');
+            $table->string('NomorHP');
+            $table->string('UnitLayanan');
+            $table->string('DeskripsiSingkatKejadian');
+            $table->string('AlamatKejadian');
         });
     }
 

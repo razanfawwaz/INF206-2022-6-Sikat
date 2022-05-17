@@ -8,5 +8,3 @@
     Alamat Kejadian <input type="text", name="AlamatKejadian" , required="required">
     <input type="submit" value="Kirim Laporan">
 </form>
-</head>
-@endsection

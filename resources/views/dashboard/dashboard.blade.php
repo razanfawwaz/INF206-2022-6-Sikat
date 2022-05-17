@@ -11,17 +11,17 @@
                     <th>Alamat Kejadian</th>
                 </thead>
                 <tbody>
-                    @foreach($form as $form)
+                    @foreach($form as $frm)
                     <tr>
-                        <td>{{$form->Nama}}</td>
-                        <td>{{$form->Nomor HP}}</td>
-                        <td>{{$form->Unit Layanan}}</td>
-                        <td>{{$form->Deskripsi Singkat Kejadian}}</td>
-                        <td>{{$form->Alamat Kejadian}}</td>
+                        <td>{{$frm->Nama}}</td>
+                        <td>{{$frm->NomorHP}}</td>
+                        <td>{{$frm->UnitLayanan}}</td>
+                        <td>{{$frm->DeskripsiSingkatKejadian}}</td>
+                        <td>{{$frm->AlamatKejadian}}</td>
                         <td>
-                            <a href="/form/edit/{{$form->Nomor HP}}">Edit</a>
+                            <a href="/form/edit/{{$frm->NomorHP}}">Edit</a>
                             <!--<-->
-                            <a style="color:red;" href="/form/hapus/{{$form->Nomor HP}}">Delete</a>
+                            <a style="color:red;" href="/form/hapus/{{$frm->NomorHP}}">Delete</a>
                         </td>
                     </tr>
                     @endforeach
