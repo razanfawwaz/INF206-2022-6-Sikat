@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +20,25 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/login', [LoginController::class, 'login'])->name('login');
-Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+Route::get('/buatlaporan', function () {
+    return view('dashboard\form');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard\dashboard');
+});
+
+Route::get('/dashboard', [FormController::class, 'readdata']);
+
+Route::get('/form', [FormController::class, 'input']);
+Route::post('/form/store', [FormController::class, 'store']);
+
+Route::get('/register', [RegisterController::class, 'index'])->name('index');
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/login', [LoginController::class, 'index'])->name('index');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
-Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
+
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
