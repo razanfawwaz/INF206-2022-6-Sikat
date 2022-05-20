@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <title>SIKAT - DY6</title>
 </head>
 <body>
@@ -73,7 +74,25 @@
   </div>
   <section class="home-section">
       <div class="text">Dashboard</div>
+      <div>Admin</div>
+    
+      <!--bagian kiri kotak-->
+        <div class="kotak-1">
+        <div>
+            Nama    : 
+            <br>
+            Petugas :
+            <br>
+            Unit    :
+        </div>    
+       
+        </div>
+
+        <!--bagian kanan kotak-->
+        
   </section>
+
+  
   <script>
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
