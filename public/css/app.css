@@ -1286,7 +1286,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0;
   height: 100%;
   width: 78px;
-  background: #11101D;
+  background: #60a5fa;
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
@@ -1384,7 +1384,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   border: none;
   border-radius: 12px;
   transition: all 0.5s ease;
-  background: #1d1b31;
+  background: #60a5fa;
 }
 .sidebar.open input{
   padding: 0 20px 0 50px;
@@ -1396,16 +1396,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0;
   transform: translateY(-50%);
   font-size: 22px;
-  background: #1d1b31;
+  background: #60a5fa;
   color: #FFF;
 }
 .sidebar.open .bx-search:hover{
-  background: #1d1b31;
+  background: #60a5fa;
   color: #FFF;
 }
 .sidebar .bx-search:hover{
   background: #FFF;
-  color: #11101d;
+  color: #60a5fa;
 }
 .sidebar li a{
   display: flex;
@@ -1415,7 +1415,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  background: #11101D;
+  background: #60a5fa;
 }
 .sidebar li a:hover{
   background: #FFF;
@@ -1436,7 +1436,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i{
   transition: all 0.5s ease;
-  color: #11101D;
+  color: #60a5fa;
 }
 .sidebar li i{
   height: 50px;
@@ -1451,7 +1451,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0;
   bottom: -8px;
   padding: 10px 14px;
-  background: #1d1b31;
+  background: #60a5fa;
   transition: all 0.5s ease;
   overflow: hidden;
 }
@@ -1485,7 +1485,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  background: #1d1b31;
+  background: #60a5fa;
   width: 100%;
   height: 60px;
   line-height: 60px;
@@ -1512,7 +1512,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .home-section .text{
   display: inline-block;
-  color: #11101d;
+  color: #60a5fa;
   font-size: 25px;
   font-weight: 500;
   margin: 18px
@@ -1521,4 +1521,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sidebar li .tooltip{
     display: none;
   }
+}
+
+.avatar-pic {
+  width: 150px;
+  }
+
+.kotak-1{
+  max-width: 500px; 
+  display:block; 
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: #60a5fa;
+  border-radius: 20px;
 }
