@@ -18,8 +18,7 @@
     <div class="logo-details">
       <i class='#'></i>
         <div class="logo_name">
-            <img src="C:\xampp\htdocs\INF206-2022-6-Sikat\public\img\LOGO SIKAT 2.png">
-            SIKAT
+            <img src="img\LOGO SIKAT 2.png" style="width:40px;">SIKAT
         </div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
@@ -102,7 +101,10 @@
             
         </div>
 
-  </section>
+        <div>
+
+        </div>
+    </section>
 
   
   <script>
