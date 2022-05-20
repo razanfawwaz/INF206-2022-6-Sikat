@@ -7,6 +7,7 @@
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <title>SIKAT - DY6</title>
 </head>
 <body>
@@ -15,8 +16,11 @@
 <!--sidebar-->
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">SIKAT</div>
+      <i class='#'></i>
+        <div class="logo_name">
+            <img src="C:\xampp\htdocs\INF206-2022-6-Sikat\public\img\LOGO SIKAT 2.png">
+            SIKAT
+        </div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
@@ -30,9 +34,9 @@
       <li>
        <a href="#">
          <i class='bx bx-user' ></i>
-         <span class="links_name">Admin</span>
+         <span class="links_name">Profil</span>
        </a>
-       <span class="tooltip">Admin</span>
+       <span class="tooltip">Profil</span>
      </li>
      <li>
        <a href="#">
@@ -72,24 +76,32 @@
      
     </ul>
   </div>
+
   <section class="home-section">
-      <div class="text">Dashboard</div>
-      <div>Admin</div>
+      @include ("navbar")
+      <div class="text">Dashboard
+      <br>
+              <span class="underline underline-offset-4 decoration-blue-400">Admin</span>
+      </div>
     
       <!--bagian kiri kotak-->
-        <div class="kotak-1">
-        <div>
-            Nama    : 
-            <br>
-            Petugas :
-            <br>
-            Unit    :
-        </div>    
-       
+        <div >
+        <div class="container">
+            <div class="row">
+                <div class="kotak-1">
+                Laporan Masuk
+                </div>
+                <div class="kotak-1">
+               Laporan Diproses
+                </div>
+                <div class="kotak-1">
+                Laporan Selesai
+                </div>
+            </div>
+            </div>
+            
         </div>
 
-        <!--bagian kanan kotak-->
-        
   </section>
 
   
