@@ -29,44 +29,37 @@
       <li>
        <a href="#">
          <i class='bx bx-user' ></i>
-         <span class="links_name">User</span>
+         <span class="links_name">Admin</span>
        </a>
-       <span class="tooltip">User</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-chat' ></i>
-         <span class="links_name">Messages</span>
-       </a>
-       <span class="tooltip">Messages</span>
+       <span class="tooltip">Admin</span>
      </li>
      <li>
        <a href="#">
          <i class='bx bx-pie-chart-alt-2' ></i>
-         <span class="links_name">Analytics</span>
+         <span class="links_name">Laporan Masuk</span>
        </a>
-       <span class="tooltip">Analytics</span>
+       <span class="tooltip">Laporan Masuk</span>
      </li>
      <li>
        <a href="#">
          <i class='bx bx-folder' ></i>
-         <span class="links_name">File Manager</span>
+         <span class="links_name">Laporan Diproses</span>
        </a>
-       <span class="tooltip">Files</span>
+       <span class="tooltip">Laporan Diproses</span>
      </li>
      <li>
        <a href="#">
          <i class='bx bx-cart-alt' ></i>
-         <span class="links_name">Order</span>
+         <span class="links_name">Laporan Selesai</span>
        </a>
-       <span class="tooltip">Order</span>
+       <span class="tooltip">Laporan Selesai</span>
      </li>
      <li>
        <a href="#">
          <i class='bx bx-heart' ></i>
-         <span class="links_name">Saved</span>
+         <span class="links_name">History</span>
        </a>
-       <span class="tooltip">Saved</span>
+       <span class="tooltip">History</span>
      </li>
      <li>
        <a href="#">
