@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>Menu Admin SIKAT</title>
 </head>
 <body>
-    {{-- @section('container') --}}
+    @section('container')
     <h1 class="h2">Menu Admin</h1>    
     <div class="table-responsive col-lg-8">
         <table class="table table-striped table-sm">
@@ -40,6 +40,7 @@
             </tbody>
         </table>
     </div>
-    {{-- @endsection --}}
+    @endsection
 </body>
 </html>
+

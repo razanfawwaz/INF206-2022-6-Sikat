@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\DashboardAdminController;
 use GuzzleHttp\Middleware;
 
 /*
@@ -29,7 +30,11 @@ Route::get('/dashboard', function () {
     return view('dashboard\dashboard');
 });
 
-Route::resource('menuAdmin', AdminController::class)
+Route::get('/admin', function () {
+    return view('admin.index');
+})->middleware('auth');
+
+Route::resource('menuAdmin', DashboardAdminController::class)
     ->middleware('auth');
 
 
