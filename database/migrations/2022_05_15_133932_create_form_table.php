@@ -14,12 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('form', function (Blueprint $table) {
+            $table->id();
             $table->string('Nama');
             $table->string('NomorHP');
             $table->string('UnitLayanan');
             $table->string('DeskripsiSingkatKejadian');
             $table->string('AlamatKejadian');
-
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

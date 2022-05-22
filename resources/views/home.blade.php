@@ -6,6 +6,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <title>Login</title>
     </head>
+    <a href="/form" style="padding:480px;">buat laporan</a>
     <body class="bg-slate-100">
         <div class="grid h-screen place-content-center">
           <h1 class="text-2xl font-semibold">Welcome to Dashboard!</h1>
