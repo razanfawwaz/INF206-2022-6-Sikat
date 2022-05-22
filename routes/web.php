@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FormController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,10 @@ Route::get('/dashboard', function () {
     return view('dashboard\dashboard');
 });
 
+Route::resource('menuAdmin', AdminController::class)
+    ->middleware('auth');
+
+
 Route::get('/dashboard', [FormController::class, 'readdata']);
 
 Route::get('/form', [FormController::class, 'input']);
@@ -39,6 +44,6 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('index');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/home', [HomeController::class, 'index'])->name('index')->middleware('auth');
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
