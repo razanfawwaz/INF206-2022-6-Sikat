@@ -4,8 +4,9 @@
         <div class="table-responsive">
             <table id="mytable" class="table table-bordred table-striped">
                 <thead>
-                    <th>Nama</th>
-                    <th>Nomor HP</th>
+                    <!--<th>Nama</th>
+                    <th>Nomor HP</th><-->
+                    <th>id Laporan</th>
                     <th>Unit Layanan</th>
                     <th>Deskripsi Singkat Kejadian</th>
                     <th>Alamat Kejadian</th>
@@ -13,8 +14,8 @@
                 <tbody>
                     @foreach($form as $frm)
                     <tr>
-                        <td>{{$frm->Nama}}</td>
-                        <td>{{$frm->NomorHP}}</td>
+                        <!--<td>{{$frm->Nama}}</td>
+                        <td>{{$frm->NomorHP}}</td><-->
                         <td>{{$frm->UnitLayanan}}</td>
                         <td>{{$frm->DeskripsiSingkatKejadian}}</td>
                         <td>{{$frm->AlamatKejadian}}</td>

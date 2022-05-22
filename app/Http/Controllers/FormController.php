@@ -22,7 +22,6 @@ class FormController extends Controller
     {
         DB::table('form')->insert([
             'Nama' => $request->Nama,
-
             'NomorHP' => $request->NomorHP,
             'UnitLayanan' => $request->UnitLayanan,
             'DeskripsiSingkatKejadian' => $request->DeskripsiSingkatKejadian,
