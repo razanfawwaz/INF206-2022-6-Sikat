@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FormController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,10 @@ Route::get('/buatlaporan', function () {
 Route::get('/dashboard', function () {
     return view('dashboard\dashboard');
 });
+
+Route::resource('menuAdmin', AdminController::class)
+    ->middleware('auth');
+
 
 Route::get('/dashboard', [FormController::class, 'readdata']);
 
