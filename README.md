@@ -2,7 +2,7 @@
 
 
 ## 𝐀𝐛𝐨𝐮𝐭 <b><big><big>𝐒𝐢𝐤𝐚𝐭</big></b>
-Sikat (Sistem Informasi Kecemasan Darurat) merupakan sebuah aplikasi berbasis web yang didalamnya terdapat nomor darurat yang terhubung langsung kerumah sakit. Sehingga baik masyarakat sekitar maupun pasien tersebut sendiri yang memerlukan bantuan dapat secara langsung dmemperoleh bantuan oleh rumah sakit. Aplikasi ini didesain secara simple sehingga penggunaanya dalam waktu darurat akan mempercepat pertolongan sampai ke lokasi.
+Sikat (Sistem Informasi Kecemasan Darurat) merupakan sebuah aplikasi berbasis web yang didalamnya terdapat nomor darurat yang terhubung langsung kerumah sakit. Sehingga baik masyarakat sekitar maupun pasien tersebut sendiri yang memerlukan bantuan dapat secara langsung dmemperoleh bantuan oleh rumah sakit. Aplikasi ini didesain secara simple sehingga penggunaanya dalam waktu darurat akan  dapat pertolongan cepat sampai ke lokasi.
 
 <h2>𝐅𝐫𝐞𝐪𝐮𝐞𝐧𝐭𝐥𝐲 𝐀𝐬𝐤𝐞𝐝 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬</h2>
 
@@ -22,7 +22,7 @@ Sikat (Sistem Informasi Kecemasan Darurat) merupakan sebuah aplikasi berbasis we
 <details open>
 <summary>&nbsp;Apa yang diperlukan saat registrasi akun?</summary>
 <small>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saat mendaftar user akan ditanyai email, nomor telepon, username akun serta password yang akan dipakai saat melakukan login.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saat mendaftar user akan mengisi email, nomor telepon, username akun serta password yang akan dipakai saat melakukan login.
 </small>
 </details>
 
