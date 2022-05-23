@@ -22,7 +22,7 @@ Sikat (Sistem Informasi Kecemasan Darurat) merupakan sebuah aplikasi berbasis we
 <details open>
 <summary>&nbsp;Apa yang diperlukan saat registrasi akun?</summary>
 <small>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saat mendaftar user akan ditanyai email, nomor telepon, username akun serta password yang akan dipakai saat melakukan login.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saat mendaftar user akan mengisi email, nomor telepon, username akun serta password yang akan dipakai saat melakukan login.
 </small>
 </details>
 
