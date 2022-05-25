@@ -3,28 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class RegisterController extends Controller
 {
-    public function create()
+    public function index()
     {
-        return view ('register.create');
+        return view('register.index', [
+            'title' => 'Register'
+        ]);
     }
     
-    public function store()
+    public function store(Request $request)
     {
-        $this->validate(request(), [
-            'email' => 'required|email',
-            'noHp' => 'required',
-            'username' => 'required',
-            'psw' => 'required|confirmed',
-            'psw-repeat' => 'required|confirmed'
-        ]);
+        //return request()->all();
+        $validatedData = $request->validate([
+              'email' => 'required|email:dns|unique:users',
+              'name' => 'required|max:50',
+              'noHp' => 'required',
+              'password' => 'required|min:5'
+          ]);
 
-        $user = User::create(request(['email', 'noHp', 'username', 'psw', 'psw-repeat']));
-
-        auth()->login($user);
-
-        return redirect('/');
+        User::create($validatedData);
+        $request->session()->flash('success', 'Berhasil Mendaftar!');
+        return redirect('/login');
     }
 }

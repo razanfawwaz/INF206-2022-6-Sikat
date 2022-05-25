@@ -1,64 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><img width="50%" height="" src="./public/img/SIKAT.png"/></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## 𝐀𝐛𝐨𝐮𝐭 <b><big><big>𝐒𝐢𝐤𝐚𝐭</big></b>
+Sikat (Sistem Informasi Kecemasan Darurat) merupakan sebuah aplikasi berbasis web yang didalamnya terdapat nomor darurat yang terhubung langsung kerumah sakit. Sehingga baik masyarakat sekitar maupun pasien tersebut sendiri yang memerlukan bantuan dapat secara langsung dmemperoleh bantuan oleh rumah sakit. Aplikasi ini didesain secara simple sehingga penggunaanya dalam waktu darurat akan  dapat pertolongan cepat sampai ke lokasi.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h2>𝐅𝐫𝐞𝐪𝐮𝐞𝐧𝐭𝐥𝐲 𝐀𝐬𝐤𝐞𝐝 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬</h2>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<details open>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<summary>&nbsp;Bagaimana laporan saya diproses?</summary>
+<small>
+&nbsp;&nbsp;&nbsp;<img width="3%" src= https://img.icons8.com/emoji/48/000000/magnifying-glass-tilted-right-emoji.png> Laporan anda akan diverifikasi </small>
+<small><br>
+&nbsp;&nbsp;&nbsp;<img width="3%" src= https://img.icons8.com/emoji/48/000000/bookmark-tabs.png> Laporan yang diterima akan diproses </small></br>
 
-## Learning Laravel
+<small>
+&nbsp;&nbsp;&nbsp;<img width="3%" src= https://img.icons8.com/emoji/48/000000/ambulance-emoji.png> Laporan berhasil </small>
+</details>
+<p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<details open>
+<summary>&nbsp;Apa yang diperlukan saat registrasi akun?</summary>
+<small>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saat mendaftar user akan mengisi email, nomor telepon, username akun serta password yang akan dipakai saat melakukan login.
+</small>
+</details>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 𝐀𝐛𝐨𝐮𝐭 𝐓𝐡𝐞 𝐏𝐫𝐨𝐣𝐞𝐜𝐭
+<small>Project ini dikerjakan dengan Laravel. Laravel adalah kerangka kerja aplikasi web berbasis PHP yang sumber terbuka, menggunakan konsep Model-View-Controller. Laravel berada dibawah lisensi MIT, dengan menggunakan GitHub sebagai tempat berbagi kode.</small>
 
-## Laravel Sponsors
+<a href="https://github.com/razanfawwaz/INF206-2022-6-Sikat/graphs/contributors" target="_blank"> <img width="5%" src="https://img.icons8.com/ultraviolet/40/000000/crowd.png"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/razanfawwaz/INF206-2022-6-Sikat/network/members" target="_blank"> <img width="5%" src="https://img.icons8.com/ultraviolet/40/000000/parallel-tasks.png"/></a>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+|     Anggota  | NPM |
+| :---: | :---: |
+|  Muhammad Razan Fawwaz  |  2008107010098  |
+| Tsani Aflah |  2008107010015 |
+| Stefhani Alba Siregar | 2008107010057  |
+|  Rizka Nuzulia| 2008107010012  |
+|  Iftahul Fadhlan | 2008107010024  |
 
-### Premium Partners
+## 𝐋𝐢𝐜𝐞𝐧𝐬𝐞
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Laravel adalah framework perangkat lunak open source yang dilisensikan di bawah [MIT license](https://opensource.org/licenses/MIT).
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

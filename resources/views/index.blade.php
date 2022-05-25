@@ -26,8 +26,8 @@
 						<li> <a href="#" class="block py-4 mt-2 pr-4 pl-3 text-gray-700  hover:bg-gray-50 md:hover:bg-transparent md:p-0 md:hover:text-blue-700">Tentang</a> </li>
 						<li> <a href="#" class="block py-4 mt-2 pr-4 pl-3 text-gray-700  hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Cara Kerja</a> </li>
 						<li>
-							<div class="bg-blue-600 hover:bg-blue-700 hover:bg-transparent hover:border hover:border-blue-500  px-6 py-2 rounded-lg drop-shadow cursor-pointer">
-                <a href="#" class="block py-2 text-white hover:bg-gray-50 hover:text-blue-700 md:hover:bg-transparent md:text-center md:hover:text-white md:p-0">Masuk</a> </div>
+							<button class="bg-blue-600 hover:bg-blue-700  px-6 py-2 rounded-lg drop-shadow cursor-pointer">
+                <a href="/login" class="block py-2 text-white hover:bg-gray-50 hover:text-blue-700 md:hover:bg-transparent md:text-center md:hover:text-white md:p-0">Masuk</a> </button>
 						</li>
 					</ul>
 				</div>
@@ -55,7 +55,7 @@
               melaporkannya!
             </p>
             <div class="pt-8">
-              <a href="#" class="bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/50 px-6 py-3 text-lg text-white rounded-lg ">
+              <a href="/login" class="bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/50 px-6 py-3 text-lg text-white rounded-lg ">
                 Buat Laporan
               </a>
             </div>
