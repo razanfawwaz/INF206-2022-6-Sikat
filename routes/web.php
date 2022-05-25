@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FormController;
-use App\Http\Controllers\DashboardAdminController;
 use GuzzleHttp\Middleware;
 
 /*
@@ -30,14 +30,6 @@ Route::get('/dashboard', function () {
     return view('dashboard\dashboard');
 });
 
-Route::get('/admin', function () {
-    return view('admin.index');
-})->middleware('auth');
-
-Route::resource('menuAdmin', DashboardAdminController::class)
-    ->middleware('auth');
-
-
 Route::get('/dashboard', [FormController::class, 'readdata']);
 
 Route::get('/form', [FormController::class, 'input']);
@@ -52,3 +44,7 @@ Route::post('/login', [LoginController::class, 'authenticate'])->name('authentic
 Route::get('/home', [HomeController::class, 'index'])->name('index')->middleware('auth');
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/admin', [AdminController::class,'index']);
+Route::get('/create', [AdminController::class, 'create']);
+Route::post('/store', [AdminController::class, 'store']);

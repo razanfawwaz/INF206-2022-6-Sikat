@@ -14,8 +14,8 @@
                 <tbody>
                     @foreach($form as $frm)
                     <tr>
-                        <!--<td>{{$frm->Nama}}</td>
-                        <td>{{$frm->NomorHP}}</td><-->
+                        {{-- <!--<td>{{$frm->Nama}}</td>
+                        <td>{{$frm->NomorHP}}</td><--> --}}
                         <td>{{$frm->UnitLayanan}}</td>
                         <td>{{$frm->DeskripsiSingkatKejadian}}</td>
                         <td>{{$frm->AlamatKejadian}}</td>

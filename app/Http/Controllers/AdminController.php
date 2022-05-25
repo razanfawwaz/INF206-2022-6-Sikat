@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\M_Laporan;
 
-class DashboardAdminController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class DashboardAdminController extends Controller
      */
     public function index()
     {
-        return view('menuAdmin.index');
+        return view('admin.index');
     }
 
     /**
@@ -23,7 +24,7 @@ class DashboardAdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.create');
     }
 
     /**
@@ -34,7 +35,10 @@ class DashboardAdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->except(['_token']);
+        M_LaporanDB::insert($data);
+        return redirect('/admin');
+
     }
 
     /**
