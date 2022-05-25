@@ -10,21 +10,17 @@
                     <th>Unit Layanan</th>
                     <th>Deskripsi Singkat Kejadian</th>
                     <th>Alamat Kejadian</th>
+                    <th>User ID</th>
                 </thead>
                 <tbody>
-                    @foreach($form as $frm)
                     <tr>
-                        <!--<td>{{$frm->Nama}}</td>
-                        <td>{{$frm->NomorHP}}</td><-->
-                        <td>{{$frm->UnitLayanan}}</td>
-                        <td>{{$frm->DeskripsiSingkatKejadian}}</td>
-                        <td>{{$frm->AlamatKejadian}}</td>
-                        <td>
-                            <a href="/form/edit/{{$frm->NomorHP}}">Edit</a>
-                            <!--<-->
-                            <a style="color:red;" href="/form/hapus/{{$frm->NomorHP}}">Delete</a>
-
-                        </td>
+                    $laporan = Auth::user()->id;
+                    @foreach($form as $form)
+                    <td>{{$form->id}}</td>
+                        <td>{{$form->UnitLayanan}}</td>
+                        <td>{{$form->DeskripsiSingkatKejadian}}</td>
+                        <td>{{$form->AlamatKejadian}}</td>
+                        <td>{{$form->users_id}}</td>
                     </tr>
                     @endforeach
                 </tbody>

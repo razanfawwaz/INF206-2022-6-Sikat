@@ -35,15 +35,22 @@ Route::resource('menuAdmin', AdminController::class)
 
 Route::get('/dashboard', [FormController::class, 'readdata']);
 
-Route::get('/form', [FormController::class, 'input']);
-Route::post('/form/store', [FormController::class, 'store']);
-
 Route::get('/register', [RegisterController::class, 'index'])->name('index');
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('index');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
-Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+});
+Route::get('/form', [FormController::class, 'input']);
+Route::post('/form/store', [FormController::class, 'store']);
+Route::get('dashboard', function () {
+    $form = DB::table('form')->get();
+    return view('dashboard.dashboard', ['form' => $form]);
+});
