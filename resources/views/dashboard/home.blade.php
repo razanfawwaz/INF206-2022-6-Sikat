@@ -104,46 +104,47 @@
 			<main>
 				<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
 					<!-- Replace with your content -->
-					<div class="bg-white shadow overflow-hidden sm:rounded-lg">
-						<div class="px-4 py-5 sm:px-6">
-						  <h3 class="text-lg leading-6 font-medium text-gray-900">Laporan Saya</h3>
-						</div>
-						<div class="border-t border-gray-200">
+					<h1 class="text-3xl font-bold pt-8 text-slate-800">Laporan Anda</h1>
+					<div class="pt-8 flex flex-col-reverse grid grid-cols-2 gap-6 lg:gap-8 sm:grid-cols-3 lg:grid-cols-2 justify-center items-center">
+						@foreach($form as $form)
+						<div class="rounded-lg p-6 bg-slate-800 hover:scale-105 transition ease-in-out duration-50">
+							<p class="text-sm text-white/70 pb-1">Nama Pelapor</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->Nama}}
+							</h1>
+							<p class="text-sm text-white/70 pt-4 pb-1">Nomor HP</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->NomorHP}}
+							</h1>
+							<p class="text-sm text-white/70 pt-4 pb-1">Unit Layanan</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->UnitLayanan}}
+							</h1>
+							<p class="text-sm text-white/70 pt-4 pb-1">Deskripsi Kejadian</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->DeskripsiSingkatKejadian}}
+							</h1>
+							<p class="text-sm text-white/70 pt-4 pb-1">Alamat Kejadian</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->AlamatKejadian}}
+							</h1>
 							
-						  <table>
-							  <thead class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-								<th class="text-sm font-medium text-gray-500">ID Laporan</th>	
-								<th class="text-sm font-medium text-gray-500">Nama Pelapor</th>	
-								<th class="text-sm font-medium text-gray-500">Nomor HP</th>	
-								<th class="text-sm font-medium text-gray-500">Unit Layanan</th>
-								<th class="text-sm font-medium text-gray-500">Deskripsi Kejadian</th>
-								<th class="text-sm font-medium text-gray-500">Alamat Kejadian</th>			
-							  </thead>
-							<dl>
-								<div >
-								  <dt class="text-sm font-medium text-gray-500">Full name</dt>
-								  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Margot Foster</dd>
+							@if($form->status == '')
+								<div class="max-w-xs mx-auto bg-yellow-600 px-1 py-3 rounded-full mt-4">
+									<p class="text-white font-bold text-xl text-center drop-shadow">Sedang Divalidasi!</p>
 								</div>
-								<div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-								  <dt class="text-sm font-medium text-gray-500">Application for</dt>
-								  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Backend Developer</dd>
+							@elseif($form->status == 'diterima')
+								<div class="max-w-xs mx-auto bg-green-600 px-1 py-3 rounded-full mt-4">
+									<p class="text-white font-bold text-xl text-center drop-shadow">Laporan Diterima!</p>
 								</div>
-								<div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-								  <dt class="text-sm font-medium text-gray-500">Email address</dt>
-								  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">margotfoster@example.com</dd>
+							@elseif($form->status == 'ditolak')
+								<div class="max-w-xs mx-auto bg-red-600 px-1 py-3 rounded-full mt-4">
+									<p class="text-white font-bold text-xl text-center drop-shadow">Laporan Ditolak!</p>
 								</div>
-								<div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-								  <dt class="text-sm font-medium text-gray-500">Salary expectation</dt>
-								  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">$120,000</dd>
-								</div>
-								<div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-								  <dt class="text-sm font-medium text-gray-500">About</dt>
-								  <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</dd>
-								</div>
-							  </dl>
-						  </table>
+							@endif
 						</div>
-					  </div>
+						@endforeach
+					</div>
 				</div>
 			</main>
 		</div>
