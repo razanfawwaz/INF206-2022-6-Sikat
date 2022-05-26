@@ -29,7 +29,6 @@ class LoginController extends Controller
             Session::flash('error', 'Email atau Password salah!');
             return redirect('/login');
         }
-        dd('berhasil login');
     }
 
     public function logout(Request $request)
@@ -37,6 +36,6 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login');
+        return redirect('/');
     }
 }

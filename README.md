@@ -22,12 +22,12 @@ Sikat (Sistem Informasi Kecemasan Darurat) merupakan sebuah aplikasi berbasis we
 <details open>
 <summary>&nbsp;Apa yang diperlukan saat registrasi akun?</summary>
 <small>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saat mendaftar user akan ditanyai email, nomor telepon, username akun serta password yang akan dipakai saat melakukan login.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saat mendaftar user akan mengisi email, nomor telepon, username akun serta password yang akan dipakai saat melakukan login.
 </small>
 </details>
 
 ## 𝐀𝐛𝐨𝐮𝐭 𝐓𝐡𝐞 𝐏𝐫𝐨𝐣𝐞𝐜𝐭
-<small>Project dikerjakan dengan Laravel. Laravel adalah kerangka kerja aplikasi web berbasis PHP yang sumber terbuka, menggunakan konsep Model-View-Controller. Laravel berada dibawah lisensi MIT, dengan menggunakan GitHub sebagai tempat berbagi kode.</small>
+<small>Project ini dikerjakan dengan Laravel. Laravel adalah kerangka kerja aplikasi web berbasis PHP yang sumber terbuka, menggunakan konsep Model-View-Controller. Laravel berada dibawah lisensi MIT, dengan menggunakan GitHub sebagai tempat berbagi kode.</small>
 
 <a href="https://github.com/razanfawwaz/INF206-2022-6-Sikat/graphs/contributors" target="_blank"> <img width="5%" src="https://img.icons8.com/ultraviolet/40/000000/crowd.png"/></a>&nbsp;&nbsp;&nbsp;
 <a href="https://github.com/razanfawwaz/INF206-2022-6-Sikat/network/members" target="_blank"> <img width="5%" src="https://img.icons8.com/ultraviolet/40/000000/parallel-tasks.png"/></a>

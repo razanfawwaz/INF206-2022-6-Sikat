@@ -1,4 +1,3 @@
-<a href="/home" class="btn btn-default" style="color:black; padding:50px">Kembali</a>
 <div class="container">
     <h2>Status Laporan</h2>
     <div class="row">
@@ -11,24 +10,17 @@
                     <th>Unit Layanan</th>
                     <th>Deskripsi Singkat Kejadian</th>
                     <th>Alamat Kejadian</th>
-                    <th>Dibuat pada</th>
+                    <th>User ID</th>
                 </thead>
                 <tbody>
-                    @foreach($form as $frm)
                     <tr>
-                    <!--<td>{{$frm->Nama}}</td>
-                        <td>{{$frm->NomorHP}}</td><-->
-                        <td>{{$frm->id}}</td>
-                        <td>{{$frm->UnitLayanan}}</td>
-                        <td>{{$frm->DeskripsiSingkatKejadian}}</td>
-                        <td>{{$frm->AlamatKejadian}}</td>
-                        <td>{{$frm->created_at}}</td>
-                        <td>
-                            <!--<a href="/form/edit/{{$frm->NomorHP}}">Edit</a>
-                        
-                            <a style="color:red;" href="/form/hapus/{{$frm->NomorHP}}">Delete</a><-->
-
-                        </td>
+                    $laporan = Auth::user()->id;
+                    @foreach($form as $form)
+                    <td>{{$form->id}}</td>
+                        <td>{{$form->UnitLayanan}}</td>
+                        <td>{{$form->DeskripsiSingkatKejadian}}</td>
+                        <td>{{$form->AlamatKejadian}}</td>
+                        <td>{{$form->users_id}}</td>
                     </tr>
                     @endforeach
                 </tbody>
