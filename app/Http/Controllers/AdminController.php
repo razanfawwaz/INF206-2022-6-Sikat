@@ -14,7 +14,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $data = M_Laporan::all();
+        return view('admin.index')->with([
+            'data' => $data
+        ]);
     }
 
     /**
@@ -36,7 +39,7 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $data = $request->except(['_token']);
-        M_LaporanDB::insert($data);
+        M_Laporan::insert($data);
         return redirect('/admin');
 
     }
@@ -49,7 +52,10 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = M_Laporan::findOrFail($id);
+        return view('admin.show')->with([
+            'data' => $data
+        ]);
     }
 
     /**
@@ -72,7 +78,10 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $item = M_Laporan::findOrFail($id);
+        $data = $request->except(['_token']);
+        $item->update($data);
+        return redirect('/admin');
     }
 
     /**
@@ -83,6 +92,8 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = M_Laporan::findOrFail($id);
+        $item->delete();
+        return redirect('/admin');
     }
 }

@@ -48,3 +48,6 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/admin', [AdminController::class,'index']);
 Route::get('/create', [AdminController::class, 'create']);
 Route::post('/store', [AdminController::class, 'store']);
+Route::get('/show/{id}', [AdminController::class, 'show']);
+Route::post('/update/{id}', [AdminController::class, 'update']);
+Route::get('/destroy/{id}', [AdminController::class, 'destroy']);

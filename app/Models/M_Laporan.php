@@ -13,9 +13,9 @@ class M_Laporan extends Model
     protected $fillable = [
         'Nama',
         'NomorHP',
-        'UnitLayanana',
-        'Deskripsi',
-        'Alamat'
+        'UnitLayanan',
+        'DeskripsiSingkatKejadian',
+        'AlamatKejadian'
 
     ];
 

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('form', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('Nama');
             $table->string('NomorHP');
             $table->string('UnitLayanan');
