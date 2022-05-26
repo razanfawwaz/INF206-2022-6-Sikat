@@ -29,7 +29,6 @@ class LoginController extends Controller
             Session::flash('error', 'Email atau Password salah!');
             return redirect('/login');
         }
-        dd('berhasil login');
     }
 
     public function logout(Request $request)

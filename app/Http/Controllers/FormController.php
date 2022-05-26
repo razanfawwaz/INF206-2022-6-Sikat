@@ -37,33 +37,6 @@ class FormController extends Controller
             'AlamatKejadian' => $request->AlamatKejadian
         ]);
 
-        return redirect('/dashboard');
-    }
-
-    public function edit($NomorHP)
-    {
-        $form = DB::table('form')->where('NomorHP', $NomorHP)->get();
-        #passing data
-        return view('edit', ['form' => $form]);
-    }
-
-    public function update(request $request)
-    {
-        DB::table('form')->where('NomorHP', $request->NomorHP)->update([
-            'Nama' => $request->Nama,
-            'NomorHP' => $request->NomorHP,
-            'UnitLayanan' => $request->UnitLayanan,
-            'DeskripsiSingkatKejadian' => $request->DeskripsiSingkatKejadian,
-            'AlamatKejadian' => $request->AlamatKejadian
-
-        ]);
-        return redirect('/tampildata');
-    }
-
-    public function hapus($NomorHP)
-    {
-        DB::table('form')->where('NomorHP', $NomorHP)->delete();
-
-        return redirect('/tampildata');
+        return redirect('/home');
     }
 }
