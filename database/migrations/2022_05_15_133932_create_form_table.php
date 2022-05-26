@@ -20,6 +20,7 @@ return new class extends Migration {
             $table->string('UnitLayanan');
             $table->string('DeskripsiSingkatKejadian');
             $table->string('AlamatKejadian');
+            $table->string('status');
             $table->timestamp('created_at')->useCurrent();
         });
     }
