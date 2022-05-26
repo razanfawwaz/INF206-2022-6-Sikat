@@ -18,7 +18,6 @@
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
         </li>
-        
         @if( auth()->check() )
                 <li class="nav-item">
                     <a class="nav-link" href="#">{{ auth()->user()->username }}</a>
