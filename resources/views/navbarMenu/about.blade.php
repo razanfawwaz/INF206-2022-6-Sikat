@@ -83,7 +83,7 @@
   <div class="float-right mb-5 mr-10 ">
     <ul>
       <li class="float-right py-0 px-5 py-0">
-        <a href="http://127.0.0.1:8000/" target="_blank"> <img src="./img/browser.png" alt="">
+        <a href="/" target="_blank"> <img src="./img/browser.png" alt="">
       </li>
       <li class="float-right py-0 rm-5 px-5 py-0">
         <a href="https://www.instagram.com/sikat.project/" target="_blank"> <img src="./img/instagram.png" alt="">
