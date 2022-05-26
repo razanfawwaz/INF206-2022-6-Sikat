@@ -106,7 +106,8 @@
 					<!-- Replace with your content -->
 					<h1 class="text-3xl font-bold pt-8 text-slate-800">Laporan Anda</h1>
 					<div class="pt-8 flex flex-col-reverse grid grid-cols-2 gap-6 lg:gap-8 sm:grid-cols-3 lg:grid-cols-2 justify-center items-center">
-						@foreach($form as $form)
+						
+						@foreach($form as $form )
 						<div class="rounded-lg p-6 bg-slate-800 hover:scale-105 transition ease-in-out duration-50">
 							<p class="text-sm text-white/70 pb-1">Nama Pelapor</p>
 							<h1 class="text-white font-bold text-xl">

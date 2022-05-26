@@ -49,7 +49,8 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/form', [FormController::class, 'input']);
 Route::post('/form/store', [FormController::class, 'store']);
 Route::get('home', function () {
-    $form = DB::table('form')->get();
+    $form = DB::table('form')->where('users_id', Auth::user()->id)
+    ->get();
     return view('dashboard.home', ['form' => $form]);
 });
 
