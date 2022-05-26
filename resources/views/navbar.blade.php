@@ -18,7 +18,7 @@
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
         </li>
-        //ini biar nama user muncul di navbar
+        <!-- //ini biar nama user muncul di navbar -->
         @if( auth()->check() )
                 <li class="nav-item">
                     <a class="nav-link" href="#">{{ auth()->user()->username }}</a>

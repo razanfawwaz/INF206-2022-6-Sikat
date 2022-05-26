@@ -1,3 +1,4 @@
+<a href="/home" class="btn btn-default" style="color:black; padding:50px">Kembali</a>
 <div class="container">
     <h2>Status Laporan</h2>
     <div class="row">

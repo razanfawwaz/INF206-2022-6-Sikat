@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/tentang', function () {
+    return view('navbarMenu\about');
+});
+
 Route::get('/buatlaporan', function () {
     return view('dashboard\form');
 });
