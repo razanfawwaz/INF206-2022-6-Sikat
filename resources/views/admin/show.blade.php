@@ -6,7 +6,7 @@
         <h1>Edit Laporan</h1>
       <div class="row">
         <div class="col-lg-8">
-          <form action="{{ url('/update/'. $data->id) }}" method="POST">
+          <form action="{{ url('admin/update/'. $data->id) }}" method="POST">
             @csrf
               <div class="form-group">
                   <label for="Nama">Nama *</label>
