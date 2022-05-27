@@ -79,20 +79,21 @@
   <!-- footer -->
 
   <div class="footer-language-wrap px-10 py-0 text-[15px]" an-tr="nv02_footer bottom--text-scroll" an-ca="scroll" an-ac="scroll:100" an-la="scroll:100">Copyright© SIKAT-DY6. All rights reserved.
-    <span class="float-right padding-right-5">Ingin tetap terhubung?
-      <div class="float-right mb-5 mr-10 ">
-        <ul>
-          <li class="float-right py-0 px-5 py-0">
-            <a href="http://127.0.0.1:8000/" target="_blank"> <img src="./img/browser.png" alt="">
-          </li>
-          <li class="float-right py-0 rm-5 px-5 py-0">
-            <a href="https://www.instagram.com/sikat.project/" target="_blank"> <img src="./img/instagram.png" alt="">
-          </li>
-          <li class="float-right py-0 rm-5 px-5 py-0">
-            <a href="https://youtu.be/c_nYu7JTyrw" target="_blank"><img src="./img/youtube.png" alt="">
-          </li>
-        </ul>
-    </span>
+  <span class="float-right padding-right-5">Ingin tetap terhubung?
+  <div class="float-right mb-5 mr-10 ">
+    <ul>
+      <li class="float-right py-0 px-5 py-0">
+        <a href="/" target="_blank"> <img src="./img/browser.png" alt="">
+      </li>
+      <li class="float-right py-0 rm-5 px-5 py-0">
+        <a href="https://www.instagram.com/sikat.project/" target="_blank"> <img src="./img/instagram.png" alt="">
+      </li>
+      <li class="float-right py-0 rm-5 px-5 py-0">
+        <a href="https://youtu.be/c_nYu7JTyrw" target="_blank"><img src="./img/youtube.png" alt="">
+      </li>
+    </ul>
+</span>
+
   </div>
   </div>
 </body>

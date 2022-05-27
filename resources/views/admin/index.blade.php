@@ -29,8 +29,8 @@
               <td>{{ $dataForm->DeskripsiSingkatKejadian }}</td>
               <td>{{ $dataForm->AlamatKejadian }}</td>
               <td>
-                <a href="{{ url('/show/'.$dataForm->id) }}" class="btn btn-warning">Edit</a>
-                <a href="{{ url('/destroy/'.$dataForm->id) }}" class="btn btn-danger">Delete</a>
+                <a href="{{ url('admin/show/'.$dataForm->id) }}" class="btn btn-warning">Edit</a>
+                <a href="{{ url('admin/destroy/'.$dataForm->id) }}" class="btn btn-danger">Delete</a>
               </td>
             </tr>    
             @endforeach
