@@ -9,18 +9,63 @@
 
 .section__content {
     padding-left: 4rem;
-    padding-right:4rem;
-    line-height:normal;
+    padding-right: 4rem;
+    line-height: normal;
 }
 
 .py-5 {
     padding-top: 1rem;
-    padding-bottom:1rem;
+    padding-bottom: 1rem;
 }
-.footer-language-wrap{
+
+.footer-language-wrap {
     padding-top: 10rem;
 
 }
-.loat-right{
-    padding-bottom:10px;
+
+.loat-right {
+    padding-bottom: 10px;
 }
+
+/* .slide {
+    width: 50vw;
+    height: 50vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 200vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+} */
+
+/* .outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y:hidden;
+    overflow-x: none;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+} */
+
+::-webkit-scrollbar {
+    display: normal;
+}
+
+.one {
+    background: #f1f5f9;
+}
+
+.two {
+    background: #f1f5f9;
+}
+
+.three {
+    background: #f1f5f9;
+}
+
+/* #f1f5f9 */
