@@ -124,9 +124,8 @@
 										class="drop-shadow appearance-none border rounded-md w-full mt-2 px-4 py-2 pl-2 pr-4 w-full text-gray-700 leading-tight focus:outline-offset-2 focus:outline-blue-500 focus:shadow-outline"
 										placeholder="Nama Lengkap"
 										type="text"
-										name="Nama"
-										id="nama"
-										required=""
+										value="{{ Auth::user()->name }}"
+										disabled
 									/>
 								</div>
 								<div class="mb-4">
@@ -137,7 +136,8 @@
 										type="text"
 										name="NomorHP"
 										id="NomorHP"
-										required=""
+										value="{{ Auth::user()->noHp }}"
+										disabled
 									/>
 								</div>
                 <div class="mb-4">

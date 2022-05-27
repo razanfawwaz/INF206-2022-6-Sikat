@@ -104,12 +104,48 @@
 			<main>
 				<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
 					<!-- Replace with your content -->
-					<div class="px-4 py-6 sm:px-0">
-						<div
-							class="border-4 border-dashed border-gray-200 rounded-lg h-96"
-						></div>
+					<h1 class="text-3xl font-bold pt-8 text-slate-800">Laporan Anda</h1>
+					<div class="pt-8 flex flex-col-reverse grid grid-cols-2 gap-6 lg:gap-8 sm:grid-cols-3 lg:grid-cols-2 justify-center items-center">
+						
+						@foreach($form as $form )
+						<div class="rounded-lg p-6 bg-slate-800 hover:scale-105 transition ease-in-out duration-50">
+							<p class="text-sm text-white/70 pb-1">Nama Pelapor</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->Nama}}
+							</h1>
+							<p class="text-sm text-white/70 pt-4 pb-1">Nomor HP</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->NomorHP}}
+							</h1>
+							<p class="text-sm text-white/70 pt-4 pb-1">Unit Layanan</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->UnitLayanan}}
+							</h1>
+							<p class="text-sm text-white/70 pt-4 pb-1">Deskripsi Kejadian</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->DeskripsiSingkatKejadian}}
+							</h1>
+							<p class="text-sm text-white/70 pt-4 pb-1">Alamat Kejadian</p>
+							<h1 class="text-white font-bold text-xl">
+								{{$form->AlamatKejadian}}
+							</h1>
+							
+							@if($form->status == '')
+								<div class="max-w-xs mx-auto bg-yellow-600 px-1 py-3 rounded-full mt-4">
+									<p class="text-white font-bold text-xl text-center drop-shadow">Sedang Divalidasi!</p>
+								</div>
+							@elseif($form->status == 'diterima')
+								<div class="max-w-xs mx-auto bg-green-600 px-1 py-3 rounded-full mt-4">
+									<p class="text-white font-bold text-xl text-center drop-shadow">Laporan Diterima!</p>
+								</div>
+							@elseif($form->status == 'ditolak')
+								<div class="max-w-xs mx-auto bg-red-600 px-1 py-3 rounded-full mt-4">
+									<p class="text-white font-bold text-xl text-center drop-shadow">Laporan Ditolak!</p>
+								</div>
+							@endif
+						</div>
+						@endforeach
 					</div>
-					<!-- /End replace -->
 				</div>
 			</main>
 		</div>
