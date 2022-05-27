@@ -19,7 +19,7 @@
 
       <p class="mt-4 leading-[27px] font-normal text-[#455869] md:w-[469px] md:text-lg mb-20 ;">
         Project yang dibangun tahun 2022 ini didirikan atas intuisi kami dalam melihat masih lambannya pelayanan darurat kepada masyarakat. Kami harap dapat membantu anda mencari pertolongan tercepat dan akurat. Karena Sikat, melayani anda sebenuh hati.
-        <a href="#" style="color:rgb(30, 136, 229);">Pelajari lebih lanjut</a>
+        <a href="/overview" style="color:rgb(30, 136, 229);">Pelajari lebih lanjut</a>
       </p>
     </h1>
   </div>
@@ -67,7 +67,7 @@
           <p class="text-lg font-semibold leading-[23.4px] text-white xl:w-[300px] xl:text-lg">
             Indonesia bukan kekurangan orang peduli, namun kurang cekat dalam mencari informasi. Thanks SIKAT!
           </p>
-          <span class="block font-medium text-white opacity-70 lg:w-[323px]">- Dwi, Aktivis kemanusiaan</span>
+          <span class="block font-medium text-white opacity-70 lg:w-[323px]">- Dwi, aktivis kemanusiaan</span>
         </div>
     </div>
     </article>
@@ -93,30 +93,8 @@
       </li>
     </ul>
 </span>
+
   </div>
   </div>
-  <!-- <div class="footer-sns padding-bottom-15"> Ingin Tetap Terhubung?
-      <ul class="float-right" py-0 rm-5 px-10 py-1">
-        <li>
-          <a href="http://127.0.0.1:8000/" target="_blank"> <img src="./img/browser.png" alt="">
-        </li>
-      </ul> </a>
-      <ul class="float-right py-0 rm-5 px-10 py-1"">
-        <li>
-          <a href="https://www.instagram.com/sikat.project/" target="_blank"> <img src="./img/instagram.png" alt="">
-        </li>
-      </ul> </a>
-      <ul class="float-right py-0 rm-5 px-10 py-1">
-        <li>
-          <a href="https://youtu.be/c_nYu7JTyrw" target="_blank"><img src="./img/youtube.png" alt="">
-        </li>
-      </ul></a>
-      </span>  
-
-    </div> -->
-
-
-
-
 </body>
 @endsection

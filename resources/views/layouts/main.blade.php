@@ -26,7 +26,7 @@
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li> <a href="/" class="block py-4 mt-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Beranda</a> </li>
             <li> <a href="/tentang" class="block py-4 mt-2 pr-4 pl-3 text-gray-700  hover:bg-gray-50 md:hover:bg-transparent md:p-0 md:hover:text-blue-700">Tentang</a> </li>
-            <li> <a href="/" class="block py-4 mt-2 pr-4 pl-3 text-gray-700  hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Cara Kerja</a> </li>
+            <li> <a href="/overview" class="block py-4 mt-2 pr-4 pl-3 text-gray-700  hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Cara Kerja</a> </li>
             <li>
               <button class="bg-blue-600 hover:bg-blue-700  px-6 py-2 rounded-lg drop-shadow cursor-pointer">
                 <a href="/login" class="block py-2 text-white hover:bg-gray-50 hover:text-blue-700 md:hover:bg-transparent md:text-center md:hover:text-white md:p-0">Masuk</a> </button>
@@ -37,5 +37,8 @@
     </div>
   </nav>
 
+</body>
+  <!--  -->
+  
   @yield('container')
   </html>

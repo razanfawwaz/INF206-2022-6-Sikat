@@ -25,8 +25,10 @@ Route::get('/', function () {
 Route::get('/tentang', function () {
     return view('navbarMenu.about');
 });
+Route::get('/overview', function () {
+    return view('navbarMenu\overview');
+});
 
-//Route Register
 Route::get('/register', [RegisterController::class, 'index'])->name('index');
 Route::post('/register', [RegisterController::class, 'store']);
 
