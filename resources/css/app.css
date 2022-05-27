@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.chr-hero-light__heading {
+    margin: 240 auto;
+    max-width: 840px;
+}
+
+.section__content {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    line-height: normal;
+}
+
+.py-5 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footer-language-wrap {
+    padding-top: 10rem;
+
+}
+
+.loat-right {
+    padding-bottom: 10px;
+}
+
+
+::-webkit-scrollbar {
+    display: normal;
+}
+
+.one {
+    background: #f1f5f9;
+}
+
+.two {
+    background: #f1f5f9;
+}
+
+.three {
+    background: #f1f5f9;
+}
