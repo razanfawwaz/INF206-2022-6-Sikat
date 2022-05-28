@@ -55,45 +55,8 @@
 								<!-- Profile dropdown -->
 							</div>
 						</div>
-						<div class="-mr-2 flex md:hidden">
-							<!-- Mobile menu button -->
-							<button
-								type="button"
-								class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-								aria-controls="mobile-menu"
-								aria-expanded="false"
-							>
-								<span class="sr-only">Open main menu</span>
-								<!--
-                        Heroicon name: outline/menu
-          
-                        Menu open: "hidden", Menu closed: "block"
-                      -->
-								<svg
-									class="block h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="2"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M4 6h16M4 12h16M4 18h16"
-									/>
-								</svg>
-								<!--
-                        Heroicon name: outline/x
-          
-                        Menu open: "block", Menu closed: "hidden"
-                      -->
-							</button>
-						</div>
 					</div>
 				</div>
-
 				<!-- Mobile menu, show/hide based on menu state. -->
 			</nav>
 
@@ -142,14 +105,18 @@
 								</div>
                 <div class="mb-4">
 									<label for="UnitLayanan">Unit Layanan</label>
-									<input
-										class="drop-shadow appearance-none border rounded-md w-full mt-2 py-2 pl-2 pr-4 w-full text-gray-700 leading-tight focus:outline-offset-2 focus:outline-blue-500 focus:shadow-outline"
-										placeholder="Masukkan Unit Layanan"
-										type="text"
+									<select
+										class="form-control drop-shadow border rounded-md w-full mt-2 py-2 pl-2 pr-4 w-full text-gray-700 leading-tight focus:outline-offset-2 focus:outline-blue-500 focus:shadow-outline"
 										name="UnitLayanan"
 										id="UnitLayanan"
 										required=""
-									/>
+										data-dropdown-toggle="dropdown"
+									>
+									<option value="" hidden selected="selected">Silahkan pilih unit layanan!</option>
+									<option value="RS">Rumah Sakit</option>
+									<option value="Polisi">Polisi</option>
+									<option value="Pemadam">Pemadam Kebakaran</option>
+									</select>
 								</div>
                 <div class="mb-4">
 									<label for="DeskripsiSingkatKejadian">Deskripsi Kejadian</label>

@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('form', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('users_id');
             $table->string('Nama');
             $table->string('NomorHP');
             $table->string('UnitLayanan');
@@ -22,6 +22,7 @@ return new class extends Migration {
             $table->string('AlamatKejadian');
             $table->string('status');
             $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at');
         });
     }
 

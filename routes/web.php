@@ -26,7 +26,7 @@ Route::get('/tentang', function () {
     return view('navbarMenu.about');
 });
 Route::get('/overview', function () {
-    return view('navbarMenu\overview');
+    return view('navbarMenu.overview');
 });
 
 Route::get('/register', [RegisterController::class, 'index'])->name('index');
@@ -36,10 +36,23 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('index');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
 
+Route::group(['middleware' => 'super_admin'], function () {
+    Route::get('/superadmin', [AdminController::class,'AdminIndex']);
+    Route::post('/superadmin/store', [AdminController::class, 'UserStore']);
+});
+
+
+Route::group(['middleware' => 'is_admin'], function () {
+    //Route Admin
+    Route::get('/admin', [AdminController::class,'index']);
+    Route::get('/admin/show/{id}', [AdminController::class, 'show']);
+    Route::post('/admin/update/{id}', [AdminController::class, 'update']);
+    Route::get('/admin/destroy/{id}', [AdminController::class, 'destroy']);
+});
+
+
 Route::group(['middleware' => 'auth', 'guest'], function () {
     //Route Home
-    Route::get('/home', [HomeController::class, 'index'])->name('index');
-    Route::get('/home', [HomeController::class, 'index'])->name('index');
     Route::get('home', function () {
         $form = DB::table('form')->where('users_id', Auth::user()->id)
     ->get();
@@ -52,10 +65,4 @@ Route::group(['middleware' => 'auth', 'guest'], function () {
     //Route Form
     Route::get('/home/form', [FormController::class, 'input']);
     Route::post('/home/form/store', [FormController::class, 'store']);
-
-    //Route Admin
-    Route::get('/admin', [AdminController::class,'index']);
-    Route::get('/admin/show/{id}', [AdminController::class, 'show']);
-    Route::post('/admin/update/{id}', [AdminController::class, 'update']);
-    Route::get('/admin/destroy/{id}', [AdminController::class, 'destroy']);
 });

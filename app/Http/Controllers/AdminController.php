@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\M_Laporan;
+use DB;
+use Auth;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -14,12 +17,31 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $data = M_Laporan::all();
-        return view('admin.index')->with([
-            'data' => $data
-        ]);
+        $form = DB::table('form')->where('unitLayanan', Auth::user()->admin_unit)->get();
+        return view('admin.index', ['form' => $form]);
     }
 
+    public function AdminIndex()
+    {
+        $form = DB::table('form')->where('unitLayanan', Auth::user()->admin_unit)->get();
+        return view('admin.superadmin', ['form' => $form]);
+    }
+
+    public function UserStore(Request $request)
+    {
+        //return request()->all();
+        $validatedData = $request->validate([
+              'email' => 'required|email:dns|unique:users',
+              'name' => 'required|max:50',
+              'noHp' => 'required',
+              'password' => 'required|min:5',
+              'admin_unit' => 'required'
+          ]);
+
+        User::create($validatedData);
+        $request->session()->flash('success', 'Berhasil Menambahkan User!');
+        return redirect('/superadmin');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -41,7 +63,6 @@ class AdminController extends Controller
         $data = $request->except(['_token']);
         M_Laporan::insert($data);
         return redirect('/admin');
-
     }
 
     /**
@@ -66,7 +87,6 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**

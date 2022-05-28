@@ -135,12 +135,16 @@
 									<p class="text-white font-bold text-xl text-center drop-shadow">Sedang Divalidasi!</p>
 								</div>
 							@elseif($form->status == 'diterima')
-								<div class="max-w-xs mx-auto bg-green-600 px-1 py-3 rounded-full mt-4">
+								<div class="max-w-xs mx-auto bg-blue-600 px-1 py-3 rounded-full mt-4">
 									<p class="text-white font-bold text-xl text-center drop-shadow">Laporan Diterima!</p>
 								</div>
 							@elseif($form->status == 'ditolak')
 								<div class="max-w-xs mx-auto bg-red-600 px-1 py-3 rounded-full mt-4">
 									<p class="text-white font-bold text-xl text-center drop-shadow">Laporan Ditolak!</p>
+								</div>
+							@elseif($form->status == 'selesai')
+								<div class="max-w-xs mx-auto bg-green-600 px-1 py-3 rounded-full mt-4">
+									<p class="text-white font-bold text-xl text-center drop-shadow">Laporan Selesai!</p>
 								</div>
 							@endif
 						</div>
