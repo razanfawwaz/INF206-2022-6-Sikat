@@ -116,7 +116,7 @@
 									Buat Laporan
 								</h1>
 							</div>
-							<form action="/form/store" method="post">
+							<form action="form/store" method="post">
 								{{ csrf_field() }}
 								<div class="py-6">
 									<label for="Nama">Nama</label>
