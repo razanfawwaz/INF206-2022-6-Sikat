@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\M_Laporan;
+use DB;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -14,10 +16,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $data = M_Laporan::all();
-        return view('admin.index')->with([
-            'data' => $data
-        ]);
+        $form = DB::table('form')->where('unitLayanan', Auth::user()->admin_unit)->get();
+        return view('admin.index', ['form' => $form]);
     }
 
     /**
@@ -41,7 +41,6 @@ class AdminController extends Controller
         $data = $request->except(['_token']);
         M_Laporan::insert($data);
         return redirect('/admin');
-
     }
 
     /**
@@ -66,7 +65,6 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**

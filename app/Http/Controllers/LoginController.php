@@ -24,7 +24,13 @@ class LoginController extends Controller
         
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/home');
+            if (Auth::user()->is_admin == 1 && Auth::user()->unitLayanan == 'admin') {
+                return redirect('/admin');
+            } elseif (Auth::user()->is_admin) {
+                return redirect('/admin2');
+            } else {
+                return redirect('/home');
+            }
         } else {
             Session::flash('error', 'Email atau Password salah!');
             return redirect('/login');
