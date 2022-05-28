@@ -26,7 +26,7 @@ Route::get('/tentang', function () {
     return view('navbarMenu.about');
 });
 Route::get('/overview', function () {
-    return view('navbarMenu\overview');
+    return view('navbarMenu.overview');
 });
 
 Route::get('/register', [RegisterController::class, 'index'])->name('index');
@@ -35,6 +35,12 @@ Route::post('/register', [RegisterController::class, 'store']);
 //Route Login
 Route::get('/login', [LoginController::class, 'index'])->name('index');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
+
+Route::group(['middleware' => 'super_admin'], function () {
+    Route::get('/superadmin', [AdminController::class,'AdminIndex']);
+    Route::post('/superadmin/store', [AdminController::class, 'UserStore']);
+});
+
 
 Route::group(['middleware' => 'is_admin'], function () {
     //Route Admin

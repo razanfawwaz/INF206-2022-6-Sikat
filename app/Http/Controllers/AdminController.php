@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\M_Laporan;
 use DB;
 use Auth;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -20,6 +21,27 @@ class AdminController extends Controller
         return view('admin.index', ['form' => $form]);
     }
 
+    public function AdminIndex()
+    {
+        $form = DB::table('form')->where('unitLayanan', Auth::user()->admin_unit)->get();
+        return view('admin.superadmin', ['form' => $form]);
+    }
+
+    public function UserStore(Request $request)
+    {
+        //return request()->all();
+        $validatedData = $request->validate([
+              'email' => 'required|email:dns|unique:users',
+              'name' => 'required|max:50',
+              'noHp' => 'required',
+              'password' => 'required|min:5',
+              'admin_unit' => 'required'
+          ]);
+
+        User::create($validatedData);
+        $request->session()->flash('success', 'Berhasil Menambahkan User!');
+        return redirect('/superadmin');
+    }
     /**
      * Show the form for creating a new resource.
      *

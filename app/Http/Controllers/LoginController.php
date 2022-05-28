@@ -24,10 +24,11 @@ class LoginController extends Controller
         
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            if (Auth::user()->is_admin == 1 && Auth::user()->unitLayanan == 'admin') {
+            if (Auth::user()->admin_unit == 'admin') {
+                return redirect('/superadmin');
+            }
+            if (Auth::user()->is_admin == 1) {
                 return redirect('/admin');
-            } elseif (Auth::user()->is_admin) {
-                return redirect('/admin2');
             } else {
                 return redirect('/home');
             }

@@ -31,12 +31,6 @@
 										aria-current="page"
 										>Dashboard</a
 									>
-
-									<a
-										href="/home/form"
-										class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-										>Buat Laporan</a
-									>
 								</div>
 							</div>
 						</div>
@@ -51,7 +45,7 @@
 										Logout
 									</button>
 								</form>
-								<!-- Profile dropdown -->
+								
 							</div>
 						</div>
 						<div class="-mr-2 flex md:hidden">
