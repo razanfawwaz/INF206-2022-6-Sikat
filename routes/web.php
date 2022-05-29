@@ -22,29 +22,47 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/buatlaporan', function () {
-    return view('dashboard\form');
+Route::get('/tentang', function () {
+    return view('navbarMenu.about');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard\dashboard');
+Route::get('/overview', function () {
+    return view('navbarMenu.overview');
 });
-
-Route::get('/dashboard', [FormController::class, 'readdata']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('index');
 Route::post('/register', [RegisterController::class, 'store']);
 
+//Route Login
 Route::get('/login', [LoginController::class, 'index'])->name('index');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::group(['middleware' => 'super_admin'], function () {
+    Route::get('/superadmin', [AdminController::class,'AdminIndex']);
+    Route::post('/superadmin/store', [AdminController::class, 'UserStore']);
+});
 
-Route::get('/admin', [AdminController::class,'index']);
-Route::get('/create', [AdminController::class, 'create']);
-Route::post('/store', [AdminController::class, 'store']);
-Route::get('/show/{id}', [AdminController::class, 'show']);
-Route::post('/update/{id}', [AdminController::class, 'update']);
-Route::get('/destroy/{id}', [AdminController::class, 'destroy']);
 
+Route::group(['middleware' => 'is_admin'], function () {
+    //Route Admin
+    Route::get('/admin', [AdminController::class,'index']);
+    Route::get('/admin/show/{id}', [AdminController::class, 'show']);
+    Route::post('/admin/update/{id}', [AdminController::class, 'update']);
+    Route::get('/admin/destroy/{id}', [AdminController::class, 'destroy']);
+});
+
+
+Route::group(['middleware' => 'auth', 'guest'], function () {
+    //Route Home
+    Route::get('home', function () {
+        $form = DB::table('form')->where('users_id', Auth::user()->id)
+    ->get();
+        return view('dashboard.index', ['form' => $form]);
+    });
+
+    //Route Auth
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+    //Route Form
+    Route::get('/home/form', [FormController::class, 'input']);
+    Route::post('/home/form/store', [FormController::class, 'store']);
+});

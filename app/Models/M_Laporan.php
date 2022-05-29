@@ -15,7 +15,8 @@ class M_Laporan extends Model
         'NomorHP',
         'UnitLayanan',
         'DeskripsiSingkatKejadian',
-        'AlamatKejadian'
+        'AlamatKejadian',
+        'status',
 
     ];
 
