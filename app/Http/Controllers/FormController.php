@@ -37,6 +37,7 @@ class FormController extends Controller
             'AlamatKejadian' => $request->AlamatKejadian
         ]);
 
+        $request->session()->flash('success', 'Berhasil Membuat Laporan!');
         return redirect('/home');
     }
 }

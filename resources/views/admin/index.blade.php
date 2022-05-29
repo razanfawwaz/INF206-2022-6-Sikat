@@ -16,7 +16,7 @@
 							<div class="flex-shrink-0">
 								<img
 									class="h-8 w-8"
-									src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+									src="./img/logo.png"
 									alt="Workflow"
 								/>
 							</div>
@@ -102,6 +102,22 @@
 					<h1 class="text-3xl font-bold pt-8 text-slate-800">
 						Panel Admin 
 					</h1>
+					@if(session()->has('success'))
+						<div
+							class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mt-2 rounded relative"
+							role="alert"
+						>
+							<p>Berhasil Menyimpan Laporan</p>
+							{{ session("status") }}
+						</div>
+						@endif @if(session()->has('error'))
+						<div
+							class="bg-red-100 border border-red-400 text-red-700 px-4 py-3  mt-2 rounded relative"
+							role="alert"
+						>
+							<p>{{ session("error") }}</p>
+						</div>
+					@endif
 					<div
 						class="pt-8 flex flex-col-reverse grid grid-cols-2 gap-6 lg:gap-8 sm:grid-cols-3 lg:grid-cols-2 justify-center items-center"
 					>

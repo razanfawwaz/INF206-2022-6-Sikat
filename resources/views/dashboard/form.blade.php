@@ -16,7 +16,7 @@
 							<div class="flex-shrink-0">
 								<img
 									class="h-8 w-8"
-									src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+									src="../img/logo.png"
 									alt="Workflow"
 								/>
 							</div>
@@ -113,7 +113,7 @@
 										required=""
 										data-dropdown-toggle="dropdown"
 									>
-									<option value="" hidden selected="selected">Silahkan pilih unit layanan!</option>
+									<option value="" selected="selected">Silahkan pilih unit layanan!</option>
 									<option value="RS">Rumah Sakit</option>
 									<option value="Polisi">Polisi</option>
 									<option value="Pemadam">Pemadam Kebakaran</option>

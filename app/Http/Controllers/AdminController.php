@@ -101,6 +101,7 @@ class AdminController extends Controller
         $item = M_Laporan::findOrFail($id);
         $data = $request->except(['_token']);
         $item->update($data);
+        $request->session()->flash('success', 'Berhasil Menyimpan Data!');
         return redirect('/admin');
     }
 
