@@ -42,6 +42,7 @@
 						</div>
 						<div class="hidden md:block">
 							<div class="ml-4 flex items-center md:ml-6">
+								<p class="text-slate-200 px-6 font-semibold">Halo, {{Auth()->user()->name}}!</p>
 								<form action="/logout" method="post">
 									@csrf
 									<button
@@ -98,37 +99,47 @@
 
 			<header class="bg-white shadow">
 				<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-					<h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+					<h1 class="text-3xl font-bold text-gray-900">Panel Admin</h1>
 				</div>
 			</header>
 			<main>
 				<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
 					<!-- Replace with your content -->
+					<div>
+						<div
+							class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mt-2 rounded relative"
+							role="alert"
+						>
+							<p>Berhasil Mendaftar!</p>
+							{{ session("status") }}
+						</div>
+						@if(session()->has('success'))
+						<div
+							class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mt-2 rounded relative"
+							role="alert"
+						>
+							<p>Berhasil Mendaftar!</p>
+							{{ session("status") }}
+						</div>
+						@endif @if(session()->has('error'))
+						<div
+							class="bg-red-100 border border-red-400 text-red-700 px-4 py-3  mt-2 rounded relative"
+							role="alert"
+						>
+							<p>{{ session("error") }}</p>
+						</div>
+						@endif
+					</div>
+
 					<h1 class="text-3xl font-bold pt-8 text-slate-800">
-						Panel Admin
+						Tambah User
 					</h1>
-					@if(session()->has('success'))
 					<div
-						class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 mb-4 rounded relative"
-						role="alert"
-					>
-						<p>Berhasil Mendaftar!</p>
-						{{ session("status") }}
-					</div>
-					@endif @if(session()->has('error'))
-					<div
-						class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mb-4 rounded relative"
-						role="alert"
-					>
-						<p>{{ session("error") }}</p>
-					</div>
-					@endif
-					<div
-						class="pt-8 flex flex-col-reverse grid grid-cols-2 gap-6 lg:gap-8 sm:grid-cols-3 lg:grid-cols-2 justify-center items-center"
+						class="pt-2 flex flex-col-reverse grid grid-cols-2 gap-6 lg:gap-8 sm:grid-cols-3 lg:grid-cols-2 justify-center items-center"
 					>
 						<form action="superadmin/store" method="post">
 							@csrf
-							<div class="py-6">
+							<div class="py-4">
 								<label for="email">Email</label>
 								<input
 									class="drop-shadow appearance-none border rounded-md w-full mt-2 px-4 py-2 pl-2 pr-4 w-full text-gray-700 leading-tight focus:outline-offset-2 focus:outline-blue-500 focus:shadow-outline"
@@ -173,6 +184,7 @@
 								/>
 							</div>
 							<div class="mb-4">
+								<label for="admin_unit">Unit Layanan</label>
 								<select
 									class="form-control drop-shadow border rounded-md w-full mt-2 py-2 pl-2 pr-4 w-full text-gray-700 leading-tight focus:outline-offset-2 focus:outline-blue-500 focus:shadow-outline"
 									name="admin_unit"
@@ -188,6 +200,21 @@
 									<option value="Pemadam">
 										Pemadam Kebakaran
 									</option>
+								</select>
+							</div>
+							<div class="mb-4">
+								<label for="is_admin">Jenis Admin</label>
+								<select
+									class="form-control drop-shadow border rounded-md w-full mt-2 py-2 pl-2 pr-4 w-full text-gray-700 leading-tight focus:outline-offset-2 focus:outline-blue-500 focus:shadow-outline"
+									name="admin_unit"
+									id="admin_unit"
+									required=""
+									data-dropdown-toggle="dropdown"
+								>
+									<option value="" selected="selected">
+										Silahkan pilih jenis admin!
+									</option>
+									<option value="2">Admin unit</option>
 								</select>
 							</div>
 							<div class="pt-4">

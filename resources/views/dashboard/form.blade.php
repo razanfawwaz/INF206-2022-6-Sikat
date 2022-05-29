@@ -43,6 +43,7 @@
 						</div>
 						<div class="hidden md:block">
 							<div class="ml-4 flex items-center md:ml-6">
+								<p class="text-slate-200 px-6 font-semibold">Halo, {{Auth()->user()->name}}!</p>
 								<form action="/logout" method="post">
 									@csrf
 									<button
