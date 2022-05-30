@@ -193,8 +193,8 @@
 								<label for="is_admin">Jenis Admin</label>
 								<select
 									class="form-control drop-shadow border rounded-md w-full mt-2 py-2 pl-2 pr-4 w-full text-gray-700 leading-tight focus:outline-offset-2 focus:outline-blue-500 focus:shadow-outline"
-									name="admin_unit"
-									id="admin_unit"
+									name="is_admin"
+									id="is_admin"
 									required=""
 									data-dropdown-toggle="dropdown"
 								>

@@ -31,11 +31,12 @@ class AdminController extends Controller
     {
         //return request()->all();
         $validatedData = $request->validate([
-              'email' => 'required|email:dns|unique:users',
-              'name' => 'required|max:50',
-              'noHp' => 'required',
-              'password' => 'required|min:5',
-              'admin_unit' => 'required'
+            'email' => 'required|email:dns|unique:users',
+            'name' => 'required|max:50',
+            'noHp' => 'required',
+            'password' => 'required|min:5',
+            'admin_unit' => 'required',
+            'is_admin' => 'required',
           ]);
 
         User::create($validatedData);
