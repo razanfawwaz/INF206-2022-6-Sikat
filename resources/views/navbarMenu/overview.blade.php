@@ -29,7 +29,7 @@
                         <p class="mt-4 leading-[25px] font-normal text-[#455869] md:w-[469px] md:text-lg mb-20 ;">
                             Masuk dari web browser ke laman Sikat.
                             <br>
-                            1. Pilih <a href="/login" style="color:rgb(30, 136, 229);">Masuk</a> di sudut kanan atas atau tekan <a href="/home/form" style="color:rgb(30, 136, 229);">Buat Laporan</a>
+                            1. Pilih <a href="/login" style="color:rgb(30, 136, 229);">Login</a> di sudut kanan atas atau tekan <a href="/home/form" style="color:rgb(30, 136, 229);">Buat Laporan</a>
                             <br>
                             2. Lakukan registrasi <b style="color:black;"> Daftar akun dan Login </b>
                             <br>
